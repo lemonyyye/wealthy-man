@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>秒变有钱人</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/jindutiao.css">
+</head>
+<body>
+    <div class="cont">
+        <div class="form-box">
+            <!-- <label for="uname">你想拥有多少钱？</label> -->
+            <input type="text" class="inputBox" id="uname" placeholder="你想拥有多少钱？">
+            <input type="button" value="一键有钱" class="btnBox">
+        </div>
+        <div class="progress">
+            <div class="bar shadow bars"></div>
+        </div>
+        <div class="output"></div>
+    </div>
+    <script src="js/jindutiao.js"></script>
+    <script>
+        let inputBox = document.querySelector(".inputBox");
+        let btnBox = document.querySelector(".btnBox");
+        let output = document.querySelector(".output");
+        // 进度条
+        const progress = document.querySelector('.progress');
+        const bar = document.querySelector('.progress .bar');
+        bar.style.width = 0
+        
+        btnBox.onclick = function () {
+            if(!inputBox.value) {
+                alert('不告诉我你想要多少钱，我怎么给你？')
+                return
+            }
+            progress.style.opacity = 1
+            bar.style.transition = `width 2s`;
+            bar.style.width = '100%';
+            setTimeout(()=> {
+                output.innerHTML = '恭喜您，一键有钱成功。<br/>您现在的账户余额为' + inputBox.value
+                // inputBox.value = ''
+            }, 2000)
+        }
+    </script>
+</body>
+</html>

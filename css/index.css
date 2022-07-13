@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 70px 0;
+    height: 100vh;
+    box-sizing: border-box;
+    animation: change 3s linear infinite alternate;
+}
+.cont{
+    width: 400px;
+    margin: 0 auto;
+}
+.cont h1{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 50px;
+}
+.cont .form-box {
+    text-align: center;
+    padding: 200px 0 10px;
+}
+.cont .form-box label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+.cont .form-box input{
+    vertical-align: middle;
+    height: 40px;
+    font-size: 20px;
+}
+.cont .form-box input[type="text"] {
+    height: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.cont .form-box input[type="button"] {
+    height: 40px;
+    padding: 0 10px;
+}
+.cont .output{
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(186, 6, 87);
+    text-align: center;
+}
+.cont .output span{
+    font-size: 26px;
+    color:rgb(116, 3, 54)
+}
+/* body背景图的动画 */
+@keyframes change {
+    0%{
+    background-color: lightblue;
+    }
+    50%{
+    background-color: rgb(192, 230, 173);
+    }
+    70%{
+    background-color: rgb(230, 173, 201);
+    }
+    100%{
+    background-color: rgb(230, 201, 173);
+    }
+}
